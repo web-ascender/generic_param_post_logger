@@ -4,6 +4,7 @@ class HomeController < ApplicationController
   end
 
   def create
+    #curl --data "payload=bomtastic&ninja=salad&pirate=smiles" http://localhost:3000/home
     output =  params 
     output.delete(:action)
     output.delete(:controller)
