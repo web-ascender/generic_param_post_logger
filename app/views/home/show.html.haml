@@ -1,0 +1,12 @@
+- @payloads.each do |payload|
+  - hash =  YAML::load(payload.params)
+  %table{:style => "border:1px solid black;margin-bottom:10px;padding:2px"}
+    %tr
+      - hash.keys.each do |key|
+        %td= key
+      %td created_at
+    %tr{:style => "background-color:#CCC"}
+      - hash.values.each do |value|
+        %td= value
+      %td=payload.created_at
+  %hr
